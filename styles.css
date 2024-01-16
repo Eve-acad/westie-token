@@ -1,0 +1,131 @@
+/* Reset some basic elements */
+body, html, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set up a responsive typography system */
+body {
+    font-family: 'Bungee Spice', cursive;
+    line-height: 1.6;
+    background-image: url('bg.gif');
+    background-size: cover; /* This will ensure that the image covers the whole page */
+    background-repeat: no-repeat; /* This will prevent the image from repeating */
+    background-attachment: fixed; /* This will make the background image fixed in the view */
+}
+
+/* Style the header */
+header {
+    background-color: rgb(69, 10, 87);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.animated-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #8155f8;
+    border: 3.5px solid black; /* Black border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.animated-button:hover {
+    transform: scale(1.15); /* Enlarge the button to 105% of its original size on hover */
+    background-color: rgb(255, 255, 255);
+    color: #8155f8;
+}
+
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+img {
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+img:hover {
+    transform: scale(1.03); /* Enlarge the image to 110% of its original size on hover */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em; /* Set the font size of nav items */
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Animate the transformation and font size */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    transform: scale(1.3); /* Enlarge the link on hover */
+    font-size: 1.3em; /* Optionally increase the font size on hover */
+}
+
+/* Main section styles */
+main {
+    text-align: center;
+}
+
+#hello-kanye {
+    background-color: rgb(104, 21, 129);
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Responsive media queries */
+@media (min-width: 768px) {
+    #images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #images img {
+        max-width: 33%;
+        margin: 0 10px;
+    }
+
+    #hello-kanye h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    header nav ul li {
+        margin-right: 40px;
+    }
+
+    #hello-kanye {
+        padding: 40px;
+    }
+
+    #hello-kanye h1 {
+        font-size: 3em;
+    }
+}
